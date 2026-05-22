@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<style>
+*{
+	margin: 0;
+	letter-spacing: .6px;
+	font-family: sans-serif;
+	box-sizing: border-box;
+}
+html {
+	scroll-behavior: smooth;
+}
+body{
+	background: #f5f6fa;
+}
+.topnav{
+	padding: 20px 30px;
+	background: #ffffff;
+	/*border-bottom: 1px solid #ccc;*/
+	font-size: 18px;
+}
+.logo{
+ float: right;
+}
+.greeting{
+	padding: 40px 30px;
+	background: wheat;
+	color: white;
+}
+.greeting h1{
+	font-size: 36px;
+	/*line-height: 40px;*/
+	color: #333;
+	line-height: 70px;
+	margin-bottom: 10px;
+}
+.greeting p{
+	line-height: 35px;
+	padding: 20px 10px;
+	color:#000;
+	background: #f5f6fa;
+	max-width: 400px;
+	border-radius: 10px;
+}
+.greeting button{
+	padding: 14px 10px;
+    background: royalblue;
+    color: #fff;
+    font-size: 17px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border:none;
+    transition: 0.5s;
+}
+.greeting button:hover{
+	background: #333;
+	color:#fff;
+	cursor: pointer;
+}
+.main_man{
+	background: #fff;
+}
+/*side navigation design*/
+.side_nav{
+	background: #f2f2f2;
+	height: 100vh;
+	position: fixed;
+	height: 100vh;
+	width: 270px;
+	z-index: 9999;
+	display: none;
+}
+.side_nav a{
+	display: block;
+	text-decoration: none;
+	color: #333;
+	padding: 20px 30px;
+}
+.side_nav a:hover{
+	color: royalblue;
+	background: #333;
+	color: #fff;
+	padding-right: 30px;
+	transition: .5s ease-in-out;
+}
+.ham{
+	padding: 5px;
+}
+.ham:hover{
+	border-radius: 6px;
+	background: #333;
+	color: #fff;
+	padding: 5px;
+	transition: .5s ease-in-out;
+}
+.product_parent{
+	padding: 30px;
+}
+.product_sub{
+	background: #fff;
+}
+.product_sub{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 20px;
+}
+.product_child {
+	border-radius: 12px;
+	background: rgb(0, 0, 0.5);
+	color: #fff;
+	line-height: 32px;
+}
+.product_child:hover{
+	transform: translateY(-20px);
+	transition: .3s linear;
+	opacity: .9;
+}
+.product_child img{
+	width: 100%;
+	border-top-left-radius: 12px;
+	border-top-right-radius: 12px;
+}
+.product_child p{
+	padding: 20px;
+}
+.parent_image{
+	display: flex;
+	gap: 30px;
+}
+
+.image_me{
+	width: 300px;
+	height: 300px;
+	border-radius: 10px;
+	object-fit: cover;
+}
+.parent_text p{
+ 
+}
+</style>
+<body>
+<nav class="topnav">
+	<b class="ham" onclick="toggle_nav()">&#9776;</b>
+	<span class="logo">
+	<b>LOGO</b>
+	</span>
+</nav>
+<div class="side_nav" id="side_nav">
+	<a href="#">HOME</a>
+	<a href="#">SERVICES</a>
+	<a href="#">CONTACT</a>
+</div>
+<main>
+<center>
+<div class="greeting">
+<h1><!-- Hi,I'm Ibrahim- A creative web Developer, and Data Analyst
+	(bussines Analyst),cyber security and Ui/Ux,creative digital<br>
+	 experiences that stand out. -->
+	 	WELCOME TO <b style="color: royalblue;">DANKARD'S </b> PORTFOLIO 
+	 </h1>
+<p>I'm a passionate web developer,and data analysis focus on creating clean,responsive,and user-friendly digital expirience</p>
+<button>View my work</button>
+</center>
+</main>
+
+<div class="main_man">
+<h2 style="padding:15px 30px;"><b style="color: royalblue">Featured</b> Products</h2>
+<div class="product_parent">
+	<div class="product_sub">
+		<div class="product_child">
+				<img src="image/OIP.webp" class="images" alt="an image">
+				<p class="description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt
+			</p>
+		</div>
+		<div class="product_child">
+	<img src="image/OIP.webp" class="images" alt="an image">
+	<p class="description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt
+	</p>
+	
+		</div>
+		<div class="product_child">
+	<img src="image/OIP.webp" class="images" alt="an image">
+	<p class="description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt 
+	</p>
+	
+		</div>
+	</div>
+  </div>
+</div>
+<div>
+<h2>About me</h2>
+<div class="parent_image">
+<div class="parent_text">
+<img src="image/OIP.webp" class="image_me" alt="my image">
+</div>
+<div class="parent_text">
+<p>Hi,I'm Ibrahim- A creative web Developer, and <br>Data Analyst
+	(bussines Analyst),cyber security and Ui/Ux,<br>creative digital
+	 experiences that stand out</p>
+	 <button>learn more</button>
+</div>
+</div>
+</div>
+<script>
+	let side_nav = document.getElementById("side_nav");
+	function toggle_nav() {
+		if(side_nav.style.display === "none"){
+			side_nav.style.display = "block";
+		}else{
+			side_nav.style.display = "none";
+		}
+	}
+</script>
+</body>
+</html>

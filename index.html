@@ -20,6 +20,10 @@ body{
 }
 .topnav{
 	padding: 20px 30px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 9999;
 	background: #ffffff;
 	/*border-bottom: 1px solid #ccc;*/
 	font-size: 18px;
@@ -30,6 +34,7 @@ body{
 .greeting{
 	padding: 40px 30px;
 	background: wheat;
+	margin-top: 50px;
 	color: white;
 }
 .greeting h1{
@@ -72,6 +77,7 @@ body{
 	position: fixed;
 	height: 100vh;
 	width: 270px;
+	top: 64px;
 	z-index: 9999;
 	display: none;
 }
@@ -116,7 +122,7 @@ body{
 	line-height: 32px;
 }
 .product_child:hover{
-	transform: translateY(-20px);
+	transform: translateY(-10px);
 	transition: .3s linear;
 	opacity: .9;
 }
@@ -140,7 +146,88 @@ body{
 	object-fit: cover;
 }
 .parent_text p{
- 
+     line-height: 40px;
+     text-align: justify;
+
+}
+.parent_image{
+	padding: 20px 25px;
+	display: flex;
+}
+.parent_text img{
+	width: 100%;
+	height: auto;
+}
+.parent_text{
+	width: 50%;
+}
+@media screen and (max-width: 800px){
+	.parent_image{
+		display: block;
+	}
+	.parent_text{
+		width: 100%;
+	}
+}
+.parent_text button{
+	background: royalblue;
+	color: #fff;
+	padding: 10px 15px;
+	border: 0;
+	text-transform: uppercase;
+	border-radius: 12px;
+}
+.parent_text button:hover{
+	background: #333;
+	color: #fff;
+	transition: .4s linear;
+	cursor: pointer;
+}
+.main_question{
+	background: wheat;
+	margin: 20px 25px;
+	text-align: center;
+	padding: 20px;
+	border-radius: 11px;
+	line-height: 40px;
+	position: relative;
+	/*font-size: 40px;*/
+}
+.main_question b{
+	font-size: 20px;
+}
+.main_question button{
+	position: absolute;
+	background: royalblue;
+	border: 0;
+	transform: translate(-50%, -50%);
+	color: white;
+	padding: 12px;
+	border-radius: 12px;
+	top: 120px;
+}
+.main_question button:hover{
+	background: #333;
+	color: #fff;
+	transition: .4s ease-in-out;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 600px){
+	.main_question button{
+		top: 160px;
+	}
+}
+@media screen and (max-width: 400px){
+	.main_question button{
+		top: 200px;
+	}
+}
+footer{
+	padding: 20px 25px;
+	background: rgb(0, 0, 0, 0.8);
+	color: #fff;
+	margin: 50px 0 0 0;
 }
 </style>
 <body>
@@ -192,23 +279,168 @@ body{
 	</p>
 	
 		</div>
+		<div class="product_child">
+	<img src="image/OIP.webp" class="images" alt="an image">
+	<p class="description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt 
+	</p>
+	
+		</div><div class="product_child">
+	<img src="image/OIP.webp" class="images" alt="an image">
+	<p class="description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt 
+	</p>
+	
+		</div><div class="product_child">
+	<img src="image/OIP.webp" class="images" alt="an image">
+	<p class="description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt 
+	</p>
+	
+		</div><div class="product_child">
+	<img src="image/OIP.webp" class="images" alt="an image">
+	<p class="description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt 
+	</p>
+	
+		</div><div class="product_child">
+	<img src="image/OIP.webp" class="images" alt="an image">
+	<p class="description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt 
+	</p>
+	
+		</div><div class="product_child">
+	<img src="image/OIP.webp" class="images" alt="an image">
+	<p class="description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt 
+	</p>
+	
+		</div><div class="product_child">
+	<img src="image/OIP.webp" class="images" alt="an image">
+	<p class="description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt 
+	</p>
+	
+		</div><div class="product_child">
+	<img src="image/OIP.webp" class="images" alt="an image">
+	<p class="description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt 
+	</p>
+	
+		</div><div class="product_child">
+	<img src="image/OIP.webp" class="images" alt="an image">
+	<p class="description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt 
+	</p>
+	
+		</div><div class="product_child">
+	<img src="image/OIP.webp" class="images" alt="an image">
+	<p class="description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt 
+	</p>
+	
+		</div><div class="product_child">
+	<img src="image/OIP.webp" class="images" alt="an image">
+	<p class="description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt 
+	</p>
+	
+		</div><div class="product_child">
+	<img src="image/OIP.webp" class="images" alt="an image">
+	<p class="description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt 
+	</p>
+	
+		</div><div class="product_child">
+	<img src="image/OIP.webp" class="images" alt="an image">
+	<p class="description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt 
+	</p>
+	
+		</div><div class="product_child">
+	<img src="image/OIP.webp" class="images" alt="an image">
+	<p class="description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt 
+	</p>
+	
+		</div><div class="product_child">
+	<img src="image/OIP.webp" class="images" alt="an image">
+	<p class="description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt 
+	</p>
+	
+		</div><div class="product_child">
+	<img src="image/OIP.webp" class="images" alt="an image">
+	<p class="description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt 
+	</p>
+	
+		</div><div class="product_child">
+	<img src="image/OIP.webp" class="images" alt="an image">
+	<p class="description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt 
+	</p>
+	
+		</div><div class="product_child">
+	<img src="image/OIP.webp" class="images" alt="an image">
+	<p class="description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt 
+	</p>
+	
+		</div><div class="product_child">
+	<img src="image/OIP.webp" class="images" alt="an image">
+	<p class="description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt 
+	</p>
+	
+		</div><div class="product_child">
+	<img src="image/OIP.webp" class="images" alt="an image">
+	<p class="description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt 
+	</p>
+	
+		</div><div class="product_child">
+	<img src="image/OIP.webp" class="images" alt="an image">
+	<p class="description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt 
+	</p>
+	
+		</div><div class="product_child">
+	<img src="image/OIP.webp" class="images" alt="an image">
+	<p class="description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt 
+	</p>
+	
+		</div>
 	</div>
   </div>
 </div>
 <div>
-<h2>About me</h2>
-<div class="parent_image">
-<div class="parent_text">
-<img src="image/OIP.webp" class="image_me" alt="my image">
-</div>
-<div class="parent_text">
-<p>Hi,I'm Ibrahim- A creative web Developer, and <br>Data Analyst
-	(bussines Analyst),cyber security and Ui/Ux,<br>creative digital
-	 experiences that stand out</p>
-	 <button>learn more</button>
-</div>
-</div>
-</div>
+<h2 style="padding:15px 30px;"><b style="color: royalblue">About</b> Me</h2>
+		<div class="parent_image">
+				<div class="parent_text">
+						<img src="image/OIP.webp" class="image_me" alt="my image">
+				</div>
+				<div class="parent_text">
+						<p>Hi,I'm Ibrahim- A creative web Developer, and Data Analyst
+							(bussines Analyst),cyber security and Ui/Ux, creative digital
+							 experiences that stand out
+							</p>
+	 					<button>learn more</button>
+				</div>
+		</div>
+<div class="whiteman" style="background: white; padding: 20px 0;">
+		<div class="main_question">
+				<b>READY TO WORK TOGETHER?</b>
+                <p>Get in Touch and Let's create something Amazing..</p>
+				<button>START A PROJECT </button>
+		</div>
+	</div>
+	<footer>
+		<span>&copy; 2026 Dankard's. All Rights Reserved</span>
+		<span style="float: right;">socials</span>
+	</footer>
+
 <script>
 	let side_nav = document.getElementById("side_nav");
 	function toggle_nav() {

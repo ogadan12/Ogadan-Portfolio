@@ -3,67 +3,272 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
+	<title>Service page</title>
 </head>
 <style>
 *{
 	margin: 0;
+	letter-spacing: .6px;
 	font-family: sans-serif;
 	box-sizing: border-box;
 }
 .topnav{
 	padding: 20px 30px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 9999;
 	background: #ffffff;
-	border-bottom: 1px solid #ccc;
+	/*border-bottom: 1px solid #ccc;*/
 	font-size: 18px;
 }
 .logo{
  float: right;
 }
-.greeting{
-	padding: 40px 30px;
-	background: #000;
-	color: white;
+.side_nav{
+	background: #f2f2f2;
+	height: 100vh;
+	position: fixed;
+	height: 100vh;
+	width: 270px;
+	top: 64px;
+	z-index: 9999;
+	display: none;
 }
-.greeting h1{
-	font-size: 36px;
-	margin-bottom: 10px;
+.side_nav a{
+	display: block;
+	text-decoration: none;
+	color: #333;
+	padding: 20px 30px;
 }
-.greeting p{
+.side_nav a:hover{
+	color: royalblue;
+	background: #333;
+	color: #fff;
+	padding-right: 30px;
+	transition: .5s ease-in-out;
+}
+.expertise{
+	padding:50px;
+	background: wheat;
+	height: 40vh;
+}
+.expertise h2{
+	padding-top: 30px;
+	font-size: 33px;
+	margin-bottom: 15px;
+}
+.expertise p{
 	line-height: 25px;
-	padding: 20px 0;
-	color:#000;
+}
+.core_service{
+	padding: 10px 30px;
+}
+.services{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 20px;
+}
+.services_product{
 	background: #f5f6fa;
-	width: 30%;
+	padding: 20px 30px;
+	margin: 15px 30px;
 	border-radius: 10px;
 }
-.greeting button{
-	padding: 14px 10px;
-    background: royalblue;
-    color: #fff;
-    font-size: 17px;
-    margin-top: 10px;
-    border-radius: 10px;
-    border:none ;
+.services_product h2{
+	margin-bottom: 15px;
+	color: #000;
 }
-.greeting button:hover{
-	color: #333;
+.services_product p{
+	line-height: 25px;
+	color: grey;
+	font-size: 14px;
+}
+.services_product button{
+	padding: 10px;
+	width: 100%;
+	border-radius: 10px;
+	background: royalblue;
+	color: white;
+	border: none;
+	font-size: 15px;
+	margin-top: 8px;
+}
+.services_product button:hover{
+	background: gray;
+	color: white;
+	transition: .5s;
+}
+.website_customization{
+	padding: 10px 30px;
+}
+.services1{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+	gap: 20px;
+}
+.services_product1{
+	background: #f5f6fa;
+	padding: 20px 30px;
+	margin: 15px 30px;
+	border-radius: 10px;
+}
+.services_product1 h2{
+	margin-bottom: 10px;
+}
+.services_product1 p{
+	color: grey;
+	font-size: 16px;
+	line-height: 25px;
+}
+.how_work{
+	padding: 15px 30px;
+}
+.project_product{
+	display: grid;
+	grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+	gap: 20px;
+}
+.project_product1{
+	background: #f5f6fa;
+	padding: 30px 30px;
+	margin: 15px 30px;
+	border-radius: 10px;
+}
+.project_product1 h3{
+   margin-bottom: 15px;
+}
+.project_product1 p{
+   line-height: 25px;
+   color: grey;
+   font-size: 16px;
+}
+.project{
+	padding:20px 30px;
+	background: wheat;
+	margin:15px 30px;
+	border-radius: 10px;
+}
+.project h4{
+ margin-bottom: 10px;
+}
+.project p{
+	line-height: 25px;
+
+} 
+.project button{
+	padding: 10px 20px;
+	background: royalblue;
+	color: white;
+	border-radius: 10px;
+	font-size: 16px;
+	border: none;
+	margin-top: 10px;
+}
+.project button:hover{
+	background: grey;
+	color: white;
+	transition: .5s;
+}
+.footer{
+	background: #000;
+	color: white;
+	font-size: 13px;
+	padding: 15px;
+}
+.footer span{
+	margin:0 30px;
 }
 </style>
 <body>
 <nav class="topnav">
-	<b>&#9776;</b>
+	<b class="ham" onclick="toggle_nav()">&#9776;</b>
 	<span class="logo">
 	<b>LOGO</b>
 	</span>
 </nav>
+<div class="side_nav" id="side_nav">
+	<a href="index.html">HOME</a>
+	<a href="#">SERVICES</a>
+	<a href="#">CONTACT</a>
+</div>
 <main>
+<div class="expertise">
 <center>
-<div class="greeting">
-<h1>Hi,I'm Ibrahim- A creative web Developer<br> and Data Analyst(bussines Analyst)</h1>
-<p>passionate about web development, data analysis, cyber security and Ui/Ux, creative digital experiences that stand out.</p>
-<button>View my work</button>
+<h2>Service <b style=" color: royalblue; ">and</b> expertise</h2>
+<p>Helping business build modern digital solutions that grow brands,<br>
+ improve workflow, and increase online visibility.</p>
 </center>
+</div>
+<h2 class="core_service"><b style="color:royalblue;">core</b> services</h2>
+<div class="services">
+<div class="services_product">
+<h2>Web Developement</h2>
+<p>custom responsive website built for speed,
+ performance,and user expertice.</p>
+<button>Explore more</button>
+</div>
+<div class="services_product">
+<h2>Saas Solutions </h2>
+<p>Scalable software solution tailored for startups,
+businesses,and digital products</p>
+<button>Learn more</button>
+</div>
+<div class="services_product">
+<h2>Data Analysis</h2>
+<p>Transformming raw data into meaninful insights using spreadsheet,
+sql and python </p>
+<button>View Analysis</button>
+</div>	
+</div>
+<h2 class="website_customization"><b style="color: royalblue; ">Website</b> Customization</h2>
+<div class="services1">
+<div class="services_product1">
+<h2>Web Development</h2>
+<p>Improving layouts, responsiveness,and overall website appearance.</p>
+</div>
+<div class="services_product1">
+<h2>Data Visualisation</h2>
+<p>Presenting data clearly using dashbords, 
+charts,and report for better decision-making</p>
+</div>
+</div>
+<h2 class="how_work"><b style="color:royalblue;">How</b> I work</h2>
+<div class="project_product">
+<div class="project_product1">
+ <h3>1.Discovery</h3>
+ <p>Understanding your business goals,audience,and project requirements</p>
+</div>
+<div class="project_product1">
+ <h3>2.Strategy</h3>
+ <p>Planning the best structure,features,and development roadmap.</p>
+</div>
+<div class="project_product1">
+ <h3>3. Execution</h3>
+ <p>Designing,developing, testing, and delivering a polisshed solution</p>
+</div>
+</div>
+<div class="project">
+<center>
+<h4>Let's discuss your project</h4>
+<p>Get a free consultation to determine the best aproaach</p>
+<button class="button">Schedule call</button>
+</center>
+</div>
+<footer class="footer">
+<span>&copy; 2026 Dankard's. All Rights Reserved</span>
+<span style="float:right;">socials</span>
+</footer>
 </main>
+<script>
+	let side_nav = document.getElementById("side_nav");
+	function toggle_nav() {
+		if(side_nav.style.display === "none"){
+			side_nav.style.display = "block";
+		}else{
+			side_nav.style.display = "none";
+		}
+	}
+</script>
 </body>
 </html>
